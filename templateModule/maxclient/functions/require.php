@@ -14,6 +14,7 @@ class FuncRequire extends \lib\template\AbstractFunction
 
         if(count($exp)>1){
             $ext=$exp[count($exp)-1];
+
             if(strtolower($ext)=="js"){
                 $this->service->client->addScript($parameters[0],$callerModule,$priority);
             }else if($ext=="css"){

@@ -11,7 +11,7 @@ class headPreRender extends \lib\event\BaseListener
             }
             $stylesheets=$this->service->client->getStylesheets();
             foreach($stylesheets as $stylesheet){
-                $this->document->addStylesheet($stylesheets);
+                $this->document->addStylesheet($stylesheet);
             }
     }
 

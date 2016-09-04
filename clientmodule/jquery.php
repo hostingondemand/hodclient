@@ -6,7 +6,7 @@ namespace modules\maxclient\clientmodule;
 
         function initialize()
         {
-           $this->service->client->addScript("js/jquery.js","maxclient",9999);
+           $this->service->client->addScript("jquery/js/jquery.js","maxclient",9999);
         }
     }
 ?>
