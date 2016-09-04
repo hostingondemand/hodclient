@@ -1,7 +1,9 @@
 <?php
-namespace modules\maxclient\templateModule\maxclient;
+namespace modules\maxclient\templateModule\bootstrap;
 use lib\template\BaseModule;
 
 class Module extends BaseModule{
+
+
 }
 ?>

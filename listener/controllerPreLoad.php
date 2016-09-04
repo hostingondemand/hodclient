@@ -8,6 +8,10 @@ class ControllerPreLoad extends \lib\event\BaseListener
         if (!$this->handled) {
             $module = $this->template->getModule("maxclient");
             $this->template->registerGlobalModule($module);
+
+            $module = $this->template->getModule("bootstrap");
+            $this->template->registerGlobalModule($module);
+
             $this->handled = true;
         }
     }

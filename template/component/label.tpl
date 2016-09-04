@@ -1,0 +1,1 @@
+<label class="control-label col-sm-2">{{name}}</label>
