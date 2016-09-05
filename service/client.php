@@ -13,7 +13,7 @@
 
         function addStylesheet($stylesheet,$module,$priority){
             $arr=array("path"=>$stylesheet,"priority"=>$priority,"module"=>$module);
-            if(isset($this->stylesheets[$stylesheet]) && $this->styesheets[$stylesheet]["priority"]<$priority || !isset($this->stylesheets[$stylesheet])) {
+            if(isset($this->stylesheets[$stylesheet]) && $this->stylesheets[$stylesheet]["priority"]<$priority || !isset($this->stylesheets[$stylesheet])) {
                 $this->stylesheets[$stylesheet] = $arr;
             }
         }
