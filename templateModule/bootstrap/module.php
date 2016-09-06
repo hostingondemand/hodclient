@@ -4,6 +4,5 @@ use lib\template\BaseModule;
 
 class Module extends BaseModule{
 
-
 }
 ?>
