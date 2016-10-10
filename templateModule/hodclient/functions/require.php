@@ -1,5 +1,5 @@
 <?php
-namespace modules\maxclient\templateModule\maxclient\functions;
+namespace modules\hodclient\templateModule\hodclient\functions;
 
 use core\Loader;
 

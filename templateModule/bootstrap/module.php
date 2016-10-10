@@ -1,5 +1,5 @@
 <?php
-namespace modules\maxclient\templateModule\bootstrap;
+namespace modules\hodclient\templateModule\bootstrap;
 use lib\template\BaseModule;
 
 class Module extends BaseModule{

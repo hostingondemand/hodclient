@@ -1,5 +1,5 @@
 <?php
-    namespace modules\maxclient\service   ;
+    namespace modules\hodclient\service   ;
     class Client{
         var $scripts=array();
         var $stylesheets=array();

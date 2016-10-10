@@ -1,12 +1,12 @@
 <?php
-namespace modules\maxclient\clientmodule;
-    use modules\maxclient\lib\clientmodule\BaseClientmodule;
+namespace modules\hodclient\clientmodule;
+    use modules\hodclient\lib\clientmodule\BaseClientmodule;
 
     class Jquery extends BaseClientmodule{
 
         function initialize()
         {
-           $this->service->client->addScript("jquery/js/jquery.js","maxclient",9999);
+           $this->service->client->addScript("jquery/js/jquery.js","hodclient",9999);
         }
     }
 ?>

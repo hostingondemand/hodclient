@@ -1,4 +1,4 @@
-<?php namespace modules\maxclient\lib;
+<?php namespace modules\hodclient\lib;
 use core\Lib;
 use core\Loader;
 
@@ -6,7 +6,7 @@ class Clientmodule extends Lib
 {
     function __construct()
     {
-        Loader::loadClass("baseClientmodule","modules/maxclient/lib/clientmodule");
+        Loader::loadClass("baseClientmodule","modules/hodclient/lib/clientmodule");
     }
 
     public function __get($name)

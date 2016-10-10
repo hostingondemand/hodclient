@@ -1,4 +1,4 @@
-<?php namespace modules\maxclient\listener;
+<?php namespace modules\hodclient\listener;
 class headPreRender extends \lib\event\BaseListener
 {
     var $handled = false;

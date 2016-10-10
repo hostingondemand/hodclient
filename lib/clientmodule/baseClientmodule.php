@@ -1,5 +1,5 @@
 <?php
-namespace modules\maxclient\lib\clientmodule;
+namespace modules\hodclient\lib\clientmodule;
 use core\Base;
 
 abstract  class BaseClientmodule extends Base
