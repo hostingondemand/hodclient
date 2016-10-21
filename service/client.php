@@ -3,6 +3,7 @@
     class Client{
         var $scripts=array();
         var $stylesheets=array();
+        var $vars=array();
 
         function addScript($script,$module,$priority){
             $arr=array("path"=>$script,"priority"=>$priority,"module"=>$module);
@@ -24,6 +25,17 @@
 
         function getStylesheets(){
             return $this->stylesheets;
+        }
+
+        function setVar($key,$val){
+            $this->vars[$key]=$val;
+        }
+
+        function pushVal($key,$val){
+            if(!isset($this->vars[$key])){
+                $this->vars[$key]=array();
+            }
+            $this->vars[$key][]=$val;
         }
     }
 ?>
