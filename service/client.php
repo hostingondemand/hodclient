@@ -19,14 +19,6 @@
             }
         }
 
-        function getScripts(){
-            return $this->scripts;
-        }
-
-        function getStylesheets(){
-            return $this->stylesheets;
-        }
-
         function setVar($key,$val){
             $this->vars[$key]=$val;
         }
@@ -37,5 +29,23 @@
             }
             $this->vars[$key][]=$val;
         }
+
+        function isset($key){
+            return isset($this->vars[$key]);
+        }
+
+        function getVars(){
+            return $this->vars;
+        }
+
+        function getScripts(){
+            return $this->scripts;
+        }
+
+        function getStylesheets(){
+            return $this->stylesheets;
+        }
+
+
     }
 ?>

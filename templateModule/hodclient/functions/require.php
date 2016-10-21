@@ -23,15 +23,17 @@ class FuncRequire extends \lib\template\AbstractFunction
             }
         } else {
             $fullName = $exp[0];
-            $expm = explode("/" . $fullName);
+            $expm = explode("/" , $fullName);
             $name = $expm[0];
             if ($this->clientmodule->$name) {
+                $module= $this->clientmodule->$name;
                 if (!@$this->initialized[$fullName]) {
-                    $this->clientmodule->$name->initialize();
+                    $module->initialize();
                 }
                 if (@$expm[1]) {
                     $subModule = $expm[1];
-                    $this->clientmodule->$name->$subModule();
+
+                   $module->$subModule();
                 }
             }
         }
