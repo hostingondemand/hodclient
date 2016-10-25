@@ -12,6 +12,9 @@ class ControllerPreLoad extends \lib\event\BaseListener
             $module = $this->template->getModule("bootstrap");
             $this->template->registerGlobalModule($module);
 
+            $module = $this->template->getModule("angular");
+            $this->template->registerGlobalModule($module);
+
             $this->handled = true;
         }
     }
