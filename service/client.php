@@ -30,7 +30,7 @@
             $this->vars[$key][]=$val;
         }
 
-        function isset($key){
+        function isVarSet($key){
             return isset($this->vars[$key]);
         }
 

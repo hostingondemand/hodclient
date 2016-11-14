@@ -7,7 +7,7 @@ namespace modules\hodclient\clientmodule;
         {
            $this->service->client->addScript("angular/js/angular.js","hodclient",9990);
            $this->service->client->addScript("angular/js/app.js","hodclient",8000);
-            if(!$this->service->client->isset("ng_dependency")) {
+            if(!$this->service->client->isVarSet("ng_dependency")) {
                 $this->service->client->setVar("ng_dependency", array());
             }
         }
