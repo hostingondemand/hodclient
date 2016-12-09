@@ -18,17 +18,22 @@ class FuncMenuLink extends \lib\template\AbstractFunction
                 $active=
                     (isset($parameters[0]) && isset($parameters[1]) && isset($parameters[2]) &&
                         $parameters[0]==Loader::$actionModule &&
-                        $parameters[1]=Loader::$controller&&
+                        $parameters[1]==Loader::$controller&&
                         $parameters[2]==Loader::$action)||
-                    (isset($parameters[0]) && isset($parameters[1]) &&
+                    (isset($parameters[0]) && isset($parameters[1]) && !isset($parameters[2]) &&
                         $parameters[0]==Loader::$controller &&
-                        $parameters[1]=Loader::$action) ||
-                    (isset($parameters[0]) &&
+                        $parameters[1]==Loader::$action) ||
+                    (isset($parameters[0]) && isset($parameters[1]) && !isset($parameters[2]) &&
+                        $parameters[0]==Loader::$actionModule &&
+                        $parameters[1]==Loader::$controller) ||
+                    (isset($parameters[0]) && !isset($parameters[2]) && !isset($parameters[1]) &&
+                        (
                         !Loader::$actionModule && $parameters[0]==Loader::$controller && Loader::$action=="home"
-                    )||
-                    (isset($parameters[0]) &&
+                        ||
                         $parameters[0]==Loader::$actionModule&&Loader::$controller=="home" && Loader::$action=="home"
-                    );
+                        )
+                    )
+                  ;
                     $url=$this->route->createRoute($parameters);
         }
 
