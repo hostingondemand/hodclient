@@ -28,9 +28,9 @@ class FuncMenuLink extends \lib\template\AbstractFunction
                         $parameters[1]==Loader::$controller) ||
                     (isset($parameters[0]) && !isset($parameters[2]) && !isset($parameters[1]) &&
                         (
-                        !Loader::$actionModule && $parameters[0]==Loader::$controller && Loader::$action=="home"
+                        !Loader::$actionModule && $parameters[0]==Loader::$controller
                         ||
-                        $parameters[0]==Loader::$actionModule&&Loader::$controller=="home" && Loader::$action=="home"
+                        $parameters[0]==Loader::$actionModule
                         )
                     )
                   ;
