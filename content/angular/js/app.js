@@ -1,1 +1,1 @@
-angular.module("application",ng_dependency);
+angular.module("hodclient",ng_dependency);
