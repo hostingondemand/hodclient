@@ -20,6 +20,18 @@ class FuncRequire extends \lib\template\AbstractFunction
                 $this->service->client->addScript($parameters[0], $callerModule, $priority);
             } else if ($ext == "css") {
                 $this->service->client->addStylesheet($parameters[0], $callerModule, $priority);
+            }else if($ext=="json"){
+                $this->goModule($callerModule);
+                $data=$this->filesystem->getFile("content/".$parameters[0]);
+                $this->goBackModule();
+                if($data){
+                    if($decoded=json_decode($data,true)){
+                        foreach($decoded as $key=>$val){
+                            $this->service->client->setVar($key,$val);
+                        }
+                    }
+                }
+
             }
         } else {
             $fullName = $exp[0];
