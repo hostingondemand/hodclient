@@ -1,6 +1,8 @@
 <?php
     namespace modules\hodclient\service   ;
-    class Client{
+    use lib\service\BaseService;
+
+    class Client extends BaseService{
         var $scripts=array();
         var $stylesheets=array();
         var $vars=array();
