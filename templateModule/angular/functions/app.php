@@ -26,7 +26,7 @@ class FuncApp extends \lib\template\AbstractFunction
                 }else{
                     $priority=8003;
                 }
-                $this->service->client->addScript("app/".$parameters[0]."/".$file,false,$priority);
+                $this->service->client->addScript("app/".$parameters[0]."/".$file,Loader::$actionModule,$priority);
             }
         }
 
