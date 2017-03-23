@@ -8,7 +8,9 @@ class FuncApp extends \lib\template\AbstractFunction
     function call($parameters, $data, $content = "", $unparsed = "", $module = false)
     {
         $module= $this->clientmodule->angular->initialize();
-        $path=$this->filesystem->findRightPath("content/app/".$parameters[0]."/");
+        Loader::goModule(Loader::$actionModule);
+        $path=$this->filesystem->findRightPath("content/app/".$parameters[0]);
+        Loader::goBackModule();
         if($path){
             $files=$this->filesystem->getFiles($path);
             foreach($files as $file){
