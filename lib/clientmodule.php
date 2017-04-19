@@ -1,6 +1,6 @@
 <?php namespace modules\hodclient\lib;
-use core\Lib;
-use core\Loader;
+use hodphp\core\Lib;
+use hodphp\core\Loader;
 
 class Clientmodule extends Lib
 {

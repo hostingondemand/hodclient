@@ -1,9 +1,9 @@
 <?php
 namespace modules\hodclient\templateModule\hodclient\functions;
 
-use core\Loader;
+use hodphp\core\Loader;
 
-class FuncModelToJs extends \lib\template\AbstractFunction
+class FuncModelToJs extends \hodphp\lib\template\AbstractFunction
 {
     var $initialized = array();
 

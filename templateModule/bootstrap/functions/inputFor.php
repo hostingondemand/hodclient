@@ -1,9 +1,9 @@
 <?php
 namespace modules\hodclient\templateModule\bootstrap\functions;
 
-use core\Loader;
+use hodphp\core\Loader;
 
-class FuncInputFor extends \lib\template\AbstractFunction
+class FuncInputFor extends \hodphp\lib\template\AbstractFunction
 {
 
     function call($parameters, $data, $content = "", $unparsed = "", $module = false)

@@ -1,9 +1,9 @@
 <?php
 namespace modules\hodclient\templateModule\hodclient\functions;
 
-use core\Loader;
+use hodphp\core\Loader;
 
-class FuncRequire extends \lib\template\AbstractFunction
+class FuncRequire extends \hodphp\lib\template\AbstractFunction
 {
     var $initialized = array();
 
