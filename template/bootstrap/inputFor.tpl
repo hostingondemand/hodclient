@@ -4,5 +4,5 @@
         *
     </div>
     {{/if}}
-    {{inputFor(_field,_type,"{'class':'form-control'}",_source)}}
+    {{inputFor(_field,_type,_attributes,_source)}}
 </div>
