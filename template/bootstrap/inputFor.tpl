@@ -1,4 +1,4 @@
-<div class="col-sm-10">
+<div class="col-xs-10">
     {{if(isFieldRequired(_field))}}
     <div class="required">
         *

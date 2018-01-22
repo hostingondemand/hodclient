@@ -1,1 +1,1 @@
-<label class="control-label col-sm-2">{{name}}</label>
+<label class="control-label col-xs-2">{{name}}</label>
