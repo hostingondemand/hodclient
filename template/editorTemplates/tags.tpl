@@ -1,0 +1,2 @@
+{{client.require("jquery/tagify")}}
+<input type="text" value="{{htmlEntities(value)}}" name="{{name}}" role="tagify" data-tags="{{fordatasource(source,value)}}{{_text}},{{/fordatasource}}" {{//todo:attributes}}>
