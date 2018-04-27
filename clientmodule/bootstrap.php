@@ -8,9 +8,13 @@ class Bootstrap extends BaseClientmodule
 
     function initialize()
     {
-        $this->service->client->addScript("bootstrap/js/bootstrap.js", "hodclient", 9990);
-        $this->service->client->addStylesheet("bootstrap/css/bootstrap.css", "hodclient", 9989);
+        $this->service->client->downloadModule("bootstrap");
 
+        $this->service->client->addScript("bootstrap/bootstrap.js", "hodclient", 9990);
+        $this->service->client->addStylesheet("bootstrap/bootstrap.css", "hodclient", 9989);
+
+
+        $this->service->client->addStylesheet("bootstrap/css/glyph.css", "hodclient", 9989);
 
         if($this->filesystem->findRightPath("content/css/bootstrap-theme.css")) {
             $this->service->client->addStylesheet("css/bootstrap-theme.css", false, 9988);
@@ -21,6 +25,8 @@ class Bootstrap extends BaseClientmodule
         }
         $this->service->client->addStylesheet("bootstrap/css/custom.css", "hodclient", 9988);
     }
+
+
 }
 
 ?>
