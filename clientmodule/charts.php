@@ -10,8 +10,10 @@ namespace modules\hodclient\clientmodule;
             $jquery= $this->clientmodule->jquery;
             $jquery->initialize();
 
+            $this->service->client->downloadModule("charts");
+
             //load charts js
-           $this->service->client->addScript("charts/js/Chart.bundle.min.js","hodclient",9990);
+           $this->service->client->addScript("charts/charts.js","hodclient",9990);
         }
 
     }

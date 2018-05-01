@@ -1,26 +1,36 @@
 <?php
+
 namespace modules\hodclient\clientmodule;
-    use modules\hodclient\lib\clientmodule\BaseClientmodule;
 
-    class Angular extends BaseClientmodule{
-        function initialize()
-        {
-           $this->service->client->addScript("angular/js/angular.js","hodclient",9990);
-           $this->service->client->addScript("angular/js/app.js","hodclient",8000);
-            if(!$this->service->client->isVarSet("ng_dependency")) {
-                $this->service->client->setVar("ng_dependency", array());
-            }
-        }
+use modules\hodclient\lib\clientmodule\BaseClientmodule;
 
-        public function __call($method,$arguments){
-            //use find right path to find the file on module level
-            if($this->filesystem->findRightPath("content/angular/js/angular-".$method.".js")){
-                $this->service->client->addScript("angular/js/angular-".$method.".js","hodclient",9989);
-                $this->service->client->pushVal("ng_dependency","ng".ucfirst($method));
-            }
-            if($this->filesystem->findRightPath("content/angular/css/angular-".$method.".css")){
-                $this->service->client->addScript("jquery/js/jquery-ui.js","hodclient",9989);
-            }
+class Angular extends BaseClientmodule
+{
+    function initialize()
+    {
+        $this->service->client->downloadModule("angular");
+        $this->service->client->addScript("angular/angular.js", "hodclient", 9990);
+        $this->service->client->addScript("angular/js/app.js", "hodclient", 8000);
+        if (!$this->service->client->isVarSet("ng_dependency")) {
+            $this->service->client->setVar("ng_dependency", array());
         }
     }
+
+    public function __call($method, $arguments)
+    {
+        $filename = "angular-" . $method . ".js";
+        if (!file_exists("data/cache/hodclient/angular/" . $filename)) {
+
+            $url = $this->config->get("angular.moduleUrl", "_hodclient");
+            $version = $this->service->client->getModuleVersion("angular");
+            $url = str_replace("{{version}}", $version, $url);
+            $url = str_replace("{{module}}", $method, $url);
+
+            $this->http->download($url, "data/cache/hodclient/angular/" . $filename);
+        }
+        $this->service->client->addScript("angular/" . $filename, "hodclient", 9989);
+        $this->service->client->pushVal("ng_dependency", "ng" . ucfirst($method));
+    }
+}
+
 ?>
