@@ -20,7 +20,7 @@ class Jquery extends BaseClientmodule
     }
 
 
-    //todo: see if we can find a relieable download source for this one
+    //todo: see if we can find a reliable download source for this one
     function tagify()
     {
         $this->service->client->addScript("jquery/js/tagify.min.js", "hodclient", 9998);
