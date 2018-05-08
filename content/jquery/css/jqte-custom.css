@@ -1,0 +1,3 @@
+body .jqte_tool_icon {
+    background: url({{content("jquery-te/jqte.png")}}) no-repeat
+}

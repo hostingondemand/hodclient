@@ -29,10 +29,14 @@
             "jquery-ui.css"=>"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/{{version}}/jquery-ui.css"
         ],
 
-        "jquery.version"=>"3.1.0",
-        "jquery.files"=>[
-            "jquery.js"=>"https://cdnjs.cloudflare.com/ajax/libs/jquery/{{version}}/jquery.min.js"
+        "jquery-te.version"=>"1.4.0",
+        "jquery-te.files"=>[
+            "jqte.css"=>"https://cdnjs.cloudflare.com/ajax/libs/jquery-te/{{version}}/jquery-te.min.css",
+            "jqte.js"=>"https://cdnjs.cloudflare.com/ajax/libs/jquery-te/{{version}}/jquery-te.min.js",
+            "jqte.png"=>"https://cdnjs.cloudflare.com/ajax/libs/jquery-te/{{version}}/jquery-te.png"
         ],
+
+
 
     ]
 ?>

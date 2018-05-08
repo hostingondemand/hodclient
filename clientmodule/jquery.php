@@ -29,6 +29,16 @@ class Jquery extends BaseClientmodule
         $this->service->client->addStylesheet("jquery/css/tagify.css", "hodclient", 9999);
     }
 
+    function te()
+    {
+        $this->service->client->downloadModule("jquery-te");
+        $this->service->client->addScript("jquery-te/jqte.js", "hodclient", 9998);
+        $this->service->client->addScript("jquery/js/initTe.js", "hodclient", 9997);
+        $this->service->client->addStylesheet("jquery-te/jqte.css", "hodclient", 9999);
+        $this->service->client->addStylesheet("jquery/css/jqte-custom.css", "hodclient", 9999);
+    }
+
+
 }
 
 ?>
