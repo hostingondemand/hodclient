@@ -1,5 +1,5 @@
 <?php namespace modules\hodclient\listener;
-class headPreRender extends \hodphp\lib\event\BaseListener
+class headPreRender extends \framework\lib\event\BaseListener
 {
     var $handled = false;
 

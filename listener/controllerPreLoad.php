@@ -1,5 +1,5 @@
 <?php namespace modules\hodclient\listener;
-class ControllerPreLoad extends \hodphp\lib\event\BaseListener
+class ControllerPreLoad extends \framework\lib\event\BaseListener
 {
     var $handled = false;
 

@@ -1,9 +1,9 @@
 <?php
 namespace modules\hodclient\templateModule\angular\functions;
 
-use hodphp\core\Loader;
+use framework\core\Loader;
 
-class FuncApp extends \hodphp\lib\template\AbstractFunction
+class FuncApp extends \framework\lib\template\AbstractFunction
 {
     function call($parameters, $data, $content = "", $unparsed = "", $module = false)
     {
