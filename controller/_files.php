@@ -1,6 +1,6 @@
 <?php
 namespace modules\hodclient\controller;
-use hodphp\core\Controller;
+use framework\core\Controller;
 class _files extends Controller
 {
     function content()

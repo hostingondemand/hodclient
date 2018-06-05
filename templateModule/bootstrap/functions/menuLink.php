@@ -1,9 +1,9 @@
 <?php
 namespace modules\hodclient\templateModule\bootstrap\functions;
 
-use hodphp\core\Loader;
+use framework\core\Loader;
 
-class FuncMenuLink extends \hodphp\lib\template\AbstractFunction
+class FuncMenuLink extends \framework\lib\template\AbstractFunction
 {
 
     function call($parameters, $data, $content = "", $unparsed = "",$module=false)

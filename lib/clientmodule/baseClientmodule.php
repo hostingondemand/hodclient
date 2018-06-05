@@ -1,6 +1,6 @@
 <?php
 namespace modules\hodclient\lib\clientmodule;
-use hodphp\core\Base;
+use framework\core\Base;
 
 abstract  class BaseClientmodule extends Base
 {

@@ -2,7 +2,7 @@
 
 namespace modules\hodclient\service;
 
-use hodphp\lib\service\BaseService;
+use framework\lib\service\BaseService;
 
 class Client extends BaseService
 {
